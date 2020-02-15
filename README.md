@@ -21,7 +21,7 @@ Currently sudo is required as the script needs to wake up GPU, modprobe the nvid
     /etc/default/nvidia-xrun - nvidia-xrun config files (see config folder in this repo, contains values for variables used in /usr/bin/nvidia-xrun)
     /etc/modules-load.d/bbswitch.conf - loads bbswitch module on boot
     /etc/modprobe.d/bbswitch.conf - disables the nvidia module on boot
-    /etc/modprobe.d/nvidia-xrun-blacklist.conf - prevents any nvidia* modules to load on boot 
+    /etc/modprobe.d/nvidia-xrun-blacklist.conf - prevents any nvidia* and nouveau modules to load on boot 
     [OPTIONAL] ~/.nvidia-xinitrc - user-level custom xinit script file. You can put here your favourite window manager for example
 
 ## Setting the right bus id
