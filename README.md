@@ -1,5 +1,5 @@
 # nvidia-xrun
-Init independent fork of https://github.com/Witko/nvidia-xrun. Uses bbswitch to turn GPU on and off.
+Init independent fork of awesome https://github.com/Witko/nvidia-xrun. Uses bbswitch to turn GPU on and off.
 
 These utility scripts aim to make the life easier for nvidia cards users. It started with a revelation that bumblebee in current state offers very poor performance. This solution offers a bit more complicated procedure but offers a full GPU utilization(in terms of linux drivers)
 ## Usage:
@@ -12,17 +12,29 @@ These utility scripts aim to make the life easier for nvidia cards users. It sta
 Currently sudo is required as the script needs to wake up GPU, modprobe the nvidia driver and perform cleanup afterwards. For this we use bbswitch.
 ## Structure
 
-    nvidia-xrun - uses following dir structure:
-    /usr/bin/nvidia-xrun - the executable script
-    /etc/X11/nvidia-xorg.conf - the main X confing file
-    /etc/X11/xinit/nvidia-xinitrc - xinitrc config file. Contains the setting of provider output source
-    /etc/X11/xinit/nvidia-xinitrc.d - custom xinitrc scripts directory
-    /etc/X11/nvidia-xorg.conf.d - custom X config directory
-    /etc/default/nvidia-xrun - nvidia-xrun config files (see config folder in this repo, contains values for variables used in /usr/bin/nvidia-xrun)
-    /etc/modules-load.d/bbswitch.conf - loads bbswitch module on boot
-    /etc/modprobe.d/bbswitch.conf - disables the nvidia module on boot
-    /etc/modprobe.d/nvidia-xrun-blacklist.conf - prevents any nvidia* and nouveau modules to load on boot 
-    [OPTIONAL] ~/.nvidia-xinitrc - user-level custom xinit script file. You can put here your favourite window manager for example
+* **nvidia-xrun** - uses following dir structure:
+* **/usr/bin/nvidia-xrun** - the executable script
+* **/etc/X11/nvidia-xorg.conf** - the main X confing file
+* **/etc/X11/xinit/nvidia-xinitrc** - xinitrc config file. Contains the setting of provider output source
+* **/etc/X11/xinit/nvidia-xinitrc.d** - custom xinitrc scripts directory
+* **/etc/X11/nvidia-xorg.conf.d** - custom X config directory
+* **/etc/default/nvidia-xrun** - nvidia-xrun config files (contains values for variables used in /usr/bin/nvidia-xrun)
+* **/etc/modules-load.d/bbswitch.conf** - loads bbswitch module on boot
+* **/etc/modprobe.d/bbswitch.conf** - disables the nvidia module on boot
+* **/etc/modprobe.d/nvidia-xrun-blacklist.conf** - prevents any nvidia* and nouveau modules to load on boot 
+* **[OPTIONAL] ~/.nvidia-xinitrc** user-level custom xinit script file. You can put here your favourite window manager for example
+
+## Installation
+### Manual
+1. Clone this repository
+2. Place files from:
+    bin to /usr/bin on your system
+    X11 to /etc/X11 on your system 
+    default to /etc/default on your system
+    modules-load.d to /etc/modules-load.d on your system
+    modprobe.d to /etc/modprobe.d on your system
+3. Set the right bus id (see ##Setting the right bus id## section below)
+4. Reboot
 
 ## Setting the right bus id
 
