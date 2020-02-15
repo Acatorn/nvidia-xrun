@@ -24,17 +24,26 @@ Currently sudo is required as the script needs to wake up GPU, modprobe the nvid
 * **/etc/modprobe.d/nvidia-xrun-blacklist.conf** - prevents any nvidia* and nouveau modules to load on boot 
 * **[OPTIONAL] ~/.config/X11/nvidia-xinitrc** user-level custom xinit script file. You can put here your favourite window manager for example
 
+## Dependencies
+mesa
+bbswitch
+xinit
+xorg-server
+nvidia (proprietary drivers)
+xrandr
+
 ## Installation
 ### Manual
-1. Clone this repository
-2. Place files from:
+1. Make sure you have above dependencies installed on your system
+2. Clone this repository
+3. Place files from:
 * bin to /usr/bin on your system
 * X11 to /etc/X11 on your system 
 * default to /etc/default on your system
 * modules-load.d to /etc/modules-load.d on your system
 * modprobe.d to /etc/modprobe.d on your system
-3. Set the right bus id (see **Setting the right bus id** section below)
-4. Reboot
+4. Set the right bus id (see **Setting the right bus id** section below)
+5. Reboot
 
 ## Setting the right bus id
 
