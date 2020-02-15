@@ -64,10 +64,6 @@ To fix, you can change the DPI settings in `~/.Xresources (~/.Xdefaults)` file b
 Xft.dpi: 192
 ```
 
-### `nouveau` driver conflict
-`nouveau` driver should be automatically blacklisted by `nvidia` but in case it is not, `nvidia` might not get access to GPU. Then you need to manually blacklist `nouveau` following Arch wiki https://wiki.archlinux.org/index.php/kernel_modules#Blacklisting.
-
-
 ### Vulkan does not work
 Check https://wiki.archlinux.org/index.php/Vulkan
 * remove package vulkan-intel
