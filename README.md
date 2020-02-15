@@ -2,7 +2,7 @@
 Init independent fork of https://github.com/Witko/nvidia-xrun. Uses bbswitch to turn GPU on and off.
 
 These utility scripts aim to make the life easier for nvidia cards users. It started with a revelation that bumblebee in current state offers very poor performance. This solution offers a bit more complicated procedure but offers a full GPU utilization(in terms of linux drivers)
-Usage:
+# Usage:
 
     switch to free tty
     login
@@ -10,7 +10,7 @@ Usage:
     enjoy
 
 Currently sudo is required as the script needs to wake up GPU, modprobe the nvidia driver and perform cleanup afterwards. For this we use bbswitch.
-Structure
+# Structure
 
     nvidia-xrun - uses following dir structure:
     /usr/bin/nvidia-xrun - the executable script
@@ -23,7 +23,7 @@ Structure
     /etc/modprobe.d/nvidia-xrun-blacklist.conf
     [OPTIONAL] ~/.nvidia-xinitrc - user-level custom xinit script file. You can put here your favourite window manager for example
 
-Setting the right bus id
+# Setting the right bus id
 
 Usually the 1:0:0 bus is correct. If this is not your case(you can find out through lspci or bbswitch output mesages) you can create a conf script for example nano /etc/X11/nvidia-xorg.conf.d/30-nvidia.conf to set the proper bus id:
 
@@ -39,7 +39,7 @@ lspci | grep -i nvidia | awk '{print $1}'
 
 Note that this prints your bus id in hexadecimal, but the Xorg configuration script requires that you provide it in decimal, so you'll need to covert it. You can do this with bash:
 
-# In this example, my bus id is "3c"
+In this example, my bus id is "3c"
 bash -c "echo $(( 16#3c ))"
 
 Also this way you can adjust some nvidia settings if you encounter issues:
@@ -60,7 +60,6 @@ if [ $# -gt 0 ]; then
     $*
 else
     openbox-session
-#   startkde
 fi
 
 With this you do not need to specify the app and you can simply run:
