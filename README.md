@@ -42,11 +42,11 @@ lspci | grep -i nvidia | awk '{print $1}'
 
 For convenience you can create nano ~/.config/X11/nvidia-xinitrc and put there your favourite window manager:
 
-if [ $# -gt 0 ]; then
-    $*
-else
-    openbox-session
-fi
+    if [ $# -gt 0 ]; then
+        $*
+    else
+        openbox-session
+    fi
 
 With this you do not need to specify the app and you can simply run:
 
