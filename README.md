@@ -28,12 +28,12 @@ Currently sudo is required as the script needs to wake up GPU, modprobe the nvid
 ### Manual
 1. Clone this repository
 2. Place files from:
-    bin to /usr/bin on your system
-    X11 to /etc/X11 on your system 
-    default to /etc/default on your system
-    modules-load.d to /etc/modules-load.d on your system
-    modprobe.d to /etc/modprobe.d on your system
-3. Set the right bus id (see ##Setting the right bus id## section below)
+* bin to /usr/bin on your system
+* X11 to /etc/X11 on your system 
+* default to /etc/default on your system
+* modules-load.d to /etc/modules-load.d on your system
+* modprobe.d to /etc/modprobe.d on your system
+3. Set the right bus id (see ## Setting the right bus id## section below)
 4. Reboot
 
 ## Setting the right bus id
