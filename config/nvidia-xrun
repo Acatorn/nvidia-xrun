@@ -1,0 +1,2 @@
+MODULES_LOAD=(nvidia nvidia_uvm nvidia_modeset nvidia_drm)
+MODULES_UNLOAD=(nvidia_drm nvidia_modeset nvidia_uvm nvidia)
