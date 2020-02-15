@@ -25,12 +25,12 @@ Currently sudo is required as the script needs to wake up GPU, modprobe the nvid
 * **[OPTIONAL] ~/.config/X11/nvidia-xinitrc** user-level custom xinit script file. You can put here your favourite window manager for example
 
 ## Dependencies
-mesa
-bbswitch
-xinit
-xorg-server
-nvidia (proprietary drivers)
-xrandr
+* mesa
+* bbswitch
+* xinit
+* xorg-server
+* nvidia (proprietary drivers)
+* xrandr
 
 ## Installation
 ### Manual
